@@ -2,7 +2,7 @@ package seleniumJavaProject;
 
 import java.time.Duration;
 
-public class Sample4 {
+public class Day21Task3 {
 	public static void main(String[] args) {
 		
 		WebDriver driver = new ChromeDriver();
