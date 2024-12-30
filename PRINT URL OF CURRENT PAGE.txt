@@ -1,0 +1,19 @@
+package seleniumJavaProject;
+
+import java.time.Duration;
+
+public class TestSample {
+	public static void main(String[] args) {
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://google.com");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlywait(Duration.ofSeconds(15));
+		
+		String currenturl=driver.getCurrentUrl();
+		System.out.println("Current Url :" +currenturl);
+		driver.navigate().refresh();
+	                   driver.close();
+	}
+
+}

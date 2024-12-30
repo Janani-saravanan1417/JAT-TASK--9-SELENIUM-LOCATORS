@@ -1,0 +1,26 @@
+package seleniumJavaProject;
+
+import java.time.Duration;
+
+public class Sample2 {
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.demoblaze.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlywait(Duration.ofSeconds(15));
+		String ex="STORE";
+                                       
+                                       if (ex.equals(driver.getTitle())) {
+                   
+                                           System.out.println("Page landed on current website");
+
+                                              }
+                                        else 
+                                         {
+                                              System.out.println("Page not  landed on current website");
+		       }
+	  driver.close();
+	}
+
+}

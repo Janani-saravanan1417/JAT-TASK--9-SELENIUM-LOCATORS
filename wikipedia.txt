@@ -1,0 +1,20 @@
+package seleniumJavaProject;
+
+import java.time.Duration;
+
+public class Sample4 {
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.wikipedia.org/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlywait(Duration.ofSeconds(15));
+
+                                        driver.findElement(By.id("searchInput")).sendKeys("Artificial intelligence",keys.Enter);
+                                        driver.findElement(By.linkText("History")).click();
+                                         System.out.println(driver.getTitle());
+                                         driver.close();
+}
+}
+                                         
+
